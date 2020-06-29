@@ -1,40 +1,51 @@
 ﻿using System;
+using System.Linq.Expressions;
 
-namespace bai1
+namespace bai2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
-            TComplex sp1, sp2, sp3, sp4, sp5;
+            string i;
+            dongvat x;
 
-            sp1 = new TComplex();
+            Console.WriteLine(" chon con vat ban yeu thich ");
+            Console.WriteLine("1. cho 2. meo 3. ga 4. vit 5. chim ");
+            i = Console.ReadLine();
+            switch (i)
+            {
+                case "1":
+                    x = new cho();
+                    x.eat();
+                    x.run();
+                    x.sound();
+                    break;
+                case "2":
+                    x.eat();
+                    x.run();
+                    x.sound();
+                    break;
+                case "3":
+                    x.eat();
+                    x.run();
+                    x.sound();
+                    break;
+                case "4":
+                    x.eat();
+                    x.run();
+                    x.sound();
+                    break;
+                case "5":
+                    x.eat();
+                    x.run();
+                    x.sound();
+                    break;
 
-            Console.Write("sp1 = ");
-            sp1.input();
-
-            sp2 = new TComplex(2, 3);
-            Console.Write("sp2 = ");
-            sp2.input();
-            Console.Write("sp1 = ");
-            sp1.output();
-            Console.Write("sp2 = ");
-            sp2.output();
-
-            sp3 = sp1 - sp2;
-            Console.Write("sp3 = sp1 - sp2 = ");
-            sp3.output();
-
-            sp4 = sp1 + sp2;
-
-            Console.Write("sp4 = sp1 + sp2 = ");
-            sp4.output();
-
-            sp5 = sp4 * sp3;
-            Console.Write("sp5 = sp4 * sp3 = ");
-            sp5.output();
-
+            }
+                 
+                    
+                
         }
     }
 }

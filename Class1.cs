@@ -2,58 +2,107 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace bai1
+namespace bai2
 {
-    class TComplex
+    public abstract class dongvat
     {
-        int thuc, ao;
+        public abstract void sound();
 
-        public TComplex()
+        public virtual void eat()
         {
-            thuc = 1;
-            ao = 2;
+            Console.WriteLine("dong vat an gi ?");
         }
+        public virtual void run()
+        {
+            Console.WriteLine(" di chuyen nhu the nao?");
+        }
+        
+    }
 
-        public TComplex(int t, int a)
+    public class meo : dongvat
+    {
+        public override void sound()
         {
-            thuc = t;
-            ao = a;
+            Console.WriteLine("meo keu meo meo meo ");
+            
         }
-
-        public void input()
+        public override void eat()
         {
-            Console.WriteLine("Nhap so phuc: ");
-            Console.Write("thuc = ");
-            thuc = Convert.ToInt32(Console.ReadLine());
-            Console.Write("ao = ");
-            ao = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" dong vat an tap ");
         }
-
-        public void output()
+        public override void run()
         {
-            Console.WriteLine("{0} + {1}i", thuc, ao);
-        }
-
-        public static TComplex operator +(TComplex a, TComplex b)
-        {
-            TComplex c = new TComplex();
-            c.thuc = a.thuc + b.thuc;
-            c.ao = a.ao + b.ao;
-            return c;
-        }
-        public static TComplex operator -(TComplex a, TComplex b)
-        {
-            TComplex c = new TComplex();
-            c.thuc = a.thuc - b.thuc;
-            c.ao = a.ao - b.ao;
-            return c;
-        }
-        public static TComplex operator *(TComplex a, TComplex b)
-        {
-            TComplex c = new TComplex();
-            c.thuc = a.thuc * b.thuc - a.ao * b.ao;
-            c.ao = a.ao * b.thuc + a.thuc * b.ao;
-            return c;
+            Console.WriteLine(" di chuyen bang 4 chan  ");
         }
     }
+
+    public class cho : dongvat
+    {
+        public override void sound()
+        {
+            Console.WriteLine("cho keu gau gau gau ");
+
+        }
+        public override void eat()
+        {
+            Console.WriteLine(" dong vat an chay ");
+        }
+        public override void run()
+        {
+            Console.WriteLine(" di chuyen bang 4 chan ");
+        }
+    }
+
+    public class ga : dongvat
+    {
+        public override void sound()
+        {
+            Console.WriteLine("ga keu o o o  ");
+
+        }
+        public override void eat()
+        {
+            Console.WriteLine(" dong vat an co ");
+        }
+        public override void run()
+        {
+            Console.WriteLine(" di chuyen bang 2 chan");
+        }
+    }
+
+    public class vit : dongvat
+    {
+        public override void sound()
+        {
+            Console.WriteLine("vit keu cac cac cac ");
+
+        }
+        public override void eat()
+        {
+            Console.WriteLine(" dong vat an co ");
+        }
+        public override void run()
+        {
+            Console.WriteLine(" dong vat 2 chan biet boi  ");
+        }
+    }
+
+    public class chim : dongvat
+    {
+        public override void sound()
+        {
+            Console.WriteLine("chim keu chip chip chip ");
+
+        }
+        public override void eat()
+        {
+            Console.WriteLine(" dong vat an hat ");
+        }
+        public override void run()
+        {
+            Console.WriteLine(" di chuyen bang canh ");
+        }
+    }
+
+
 }
